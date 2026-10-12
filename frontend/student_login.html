@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <div class="box">
+        
+    <form action="../backend/student_database_store.php" method="POST" enctype="multipart/form-data">
+
+        <label>Username:</label>
+        <input type="text" name="Username" required placeholder="Enter name"><br><br>
+        
+        <label>Password:</label>
+        <input type="password" name="Password" required placeholder="Enter the password"><br><br>
+
+        <label>Roll Number:</label>
+        <input type="number" name="Roll_no" placeholder="Enter the Roll Number" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="Email" placeholder="Enter the email" required><br><br>
+
+        <label>Passport Photo:</label>
+        <input type="file" accept="image/*" name="photo"><br><br>
+
+        <label>Class:</label>
+        <select name="Class">
+            <option value="FYBCA">FYBCA</option>
+            <option value="SYBCA">SYBCA</option>
+            <option value="TYBCA">TYBCA</option>
+        </select><br><br>
+
+     <button>Register</button>  
+    </form>
+    </div>
+</body>
+</html>
+

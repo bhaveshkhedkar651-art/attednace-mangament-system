@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="teacher_data_store.css">
+</head>
+<body>
+
+    <main class="registration">
+        <p class="eyebrow">ACCOUNT SETUP</p>
+        <h1>Teacher registration</h1>
+        <p class="intro">Create your teacher account to get started.</p>
+
+        <form id="registration-form" action="../backend/teacher_data_store.php" method="POST">
+            <label for="name">Full name</label>
+            <input id="name" type="text" name="name" autocomplete="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" autocomplete="email" required>
+
+            <label for="password">Password</label>
+            <div class="password-field">
+                <input id="password" type="password" name="password" autocomplete="new-password" minlength="8" required>
+                <button id="password-toggle" class="password-toggle" type="button" aria-label="Show password" title="Show password" aria-pressed="false"><span aria-hidden="true">&#x1F441;&#xFE0E;</span></button>
+            </div>
+
+            <button type="submit">Create account</button>
+        </form>
+    </main>
+
+    <script src="teacher_data_store.js" defer></script>
+    
+</body>
+</html>

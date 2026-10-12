@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 40px 24px;
+    background: #f1f5f4;
+    color: #1c2b28;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 24px;
+    color: #173c33;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.qr-container {
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.qr-container img {
+    display: inline-block;
+    width: min(300px, 75vw);
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(23, 60, 51, 0.12);
+    background: #fff;
+    padding: 14px;
+}
+
+.link-box {
+    max-width: 760px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.link-box a {
+    color: #176b54;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+}
+
+.timer {
+    width: fit-content;
+    margin: 20px auto 28px;
+    padding: 10px 16px;
+    border: 1px solid #b9d9cc;
+    border-radius: 999px;
+    background: #e3f2eb;
+    color: #175b45;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.timer.is-expired {
+    border-color: #e4c6a6;
+    background: #fff1df;
+    color: #884a17;
+}
+
+iframe {
+    display: block;
+    max-width: 1100px;
+    width: 100%;
+    height: min(420px, 55vh);
+    min-height: 300px;
+    border: none;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(23, 60, 51, 0.08);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 28px 16px;
+    }
+
+    .link-box {
+        font-size: 0.875rem;
+    }
+
+    iframe {
+        height: 55vh;
+        min-height: 260px;
+    }
+}

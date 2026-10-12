@@ -1,0 +1,142 @@
+:root {
+    color-scheme: light;
+}
+
+.attendance-table-page {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px;
+    background: #f7fafc;
+    color: #263b46;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.attendance-table-page * {
+    box-sizing: border-box;
+}
+
+.attendance-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #dce6ef;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.attendance-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e8eef3;
+    font-size: 0.9rem;
+}
+
+.attendance-table th {
+    background: #eaf2fb;
+    color: #244a70;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.attendance-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.attendance-table tbody tr:hover {
+    background: #f6faff;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #e2f5eb;
+    color: #17623c;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.empty-message,
+.error-message {
+    margin: 0;
+    padding: 22px;
+    border: 1px solid #dce6ef;
+    border-radius: 8px;
+    background: #fff;
+    color: #627480;
+    text-align: center;
+}
+
+.attendance-filter {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.attendance-section-header {
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.attendance-section-header p {
+    margin-top: 6px;
+    color: #617681;
+    font-size: 0.9rem;
+}
+
+.attendance-filter label {
+    display: grid;
+    gap: 6px;
+    color: #526875;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.attendance-filter select {
+    min-width: 190px;
+    min-height: 42px;
+    padding: 8px 34px 8px 10px;
+    border: 1px solid #cfdae5;
+    border-radius: 6px;
+    background: #fff;
+    color: #263b46;
+    font: inherit;
+}
+
+.attendance-filter select:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.18);
+    border-color: #2563eb;
+}
+
+.error-message {
+    border-color: #f1d5d2;
+    color: #9b3028;
+}
+
+@media (max-width: 600px) {
+    .attendance-table-page {
+        padding: 8px;
+    }
+
+    .attendance-section-header {
+        align-items: stretch;
+    }
+
+    .attendance-filter select {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 10px;
+        font-size: 0.82rem;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign In</title>
+    <link rel="stylesheet" href="student_login_check.css">
+</head>
+<body>
+    <main class="login-shell">
+        <div class="brand-row">
+            <span class="brand-mark" aria-hidden="true">S</span>
+            <span>Student portal</span>
+        </div>
+
+        <p class="eyebrow">ATTENDANCE PORTAL</p>
+        <h1>Sign in</h1>
+        <p class="intro">Access your student account.</p>
+
+        <p class="error-message" id="login-error" role="alert" hidden></p>
+
+        <form action="../backend/student_login_check.php" method="POST">
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="password-control">
+                    <input id="password" type="password" name="password" autocomplete="current-password" required>
+                    <button id="password-toggle" class="password-toggle" type="button" aria-label="Show password" title="Show password" aria-pressed="false"><span aria-hidden="true">&#x1F441;&#xFE0E;</span></button>
+                </div>
+            </div>
+
+            <button class="submit-button" type="submit">Sign in</button>
+        </form>
+
+        <nav class="account-links" aria-label="Account links">
+            <a href="forget_pass.html">Forgot password?</a>
+            <p class="register-row">New student? <a href="student_login.html">Register here</a></p>
+        </nav>
+    </main>
+
+    <script src="student_login_check.js" defer></script>
+</body>
+</html>

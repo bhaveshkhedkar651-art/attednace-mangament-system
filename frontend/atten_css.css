@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attendance-box {
+    background-color: white;
+    width: 420px;
+    max-width: 90%;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.success-title {
+    color: #166534;
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #1f2937;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}

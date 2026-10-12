@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css?v=3">
+</head>
+<body>
+<div class="box"> 
+    <form action="../backend/login_check_teacher.php" method="POST">
+
+        <h2>Teacher Login</h2>
+
+        <p id="login-error" class="login-error" role="alert" hidden></p>
+
+        <lable>Email</lable>
+            <input type="email" name="email" required><br><br>
+
+        <lable>Password</lable>
+            <div class="password-control">
+                <input id="password" type="password" name="password" autocomplete="current-password" required>
+                <button id="password-toggle" class="password-toggle" type="button" aria-label="Show password" title="Show password" aria-pressed="false"><span aria-hidden="true">&#x1F441;&#xFE0E;</span></button>
+            </div><br>
+
+            <button>Login</button>
+
+            <p style="text-align:center; margin-top:10px;">
+                <a href="forget_pass.html">Forgot password?</a>
+            </p>
+            <p style="text-align:center; margin-top:10px;">
+                New teacher? <a href="teacher_data_store.html">Register here</a>
+            </p>
+    </form>
+</div>
+<script>
+    const loginErrors = {
+        wrong_password: "Password is incorrect. Please try again.",
+        invalid_login: "Incorrect email or password. Please check your details and try again."
+    };
+    const errorCode = new URLSearchParams(window.location.search).get("error");
+    if (loginErrors[errorCode]) {
+        const errorMessage = document.getElementById("login-error");
+        errorMessage.textContent = loginErrors[errorCode];
+        errorMessage.hidden = false;
+    }
+
+    const password = document.getElementById("password");
+    const passwordToggle = document.getElementById("password-toggle");
+    passwordToggle.addEventListener("click", function () {
+        const showPassword = password.type === "password";
+        const label = showPassword ? "Hide password" : "Show password";
+
+        password.type = showPassword ? "text" : "password";
+        passwordToggle.setAttribute("aria-label", label);
+        passwordToggle.title = label;
+        passwordToggle.setAttribute("aria-pressed", String(showPassword));
+    });
+</script>
+</body>
+</html>
