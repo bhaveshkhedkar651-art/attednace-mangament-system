@@ -75,6 +75,8 @@ The project uses MySQL to store and manage the records required for attendance p
 
 GitHub: [@bhaveshkhedkar651-art](https://github.com/bhaveshkhedkar651-art)
 
+<img width="1580" height="2512" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/5e4cabf0-3a97-487b-933b-26d67e77c3d1" />
+
 ## License
 
 This project is intended for educational purposes.
